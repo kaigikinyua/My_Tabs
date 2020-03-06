@@ -1,0 +1,51 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background: rgba(10, 10, 10, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  width: 7px;
+  border-radius: 5px;
+  background: #0983E3;
+}
+
+body {
+  overflow-x: hidden;
+  background: lightgray;
+}
+
+section.full {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+div.container {
+  position: relative;
+  height: 70%;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.cols2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+h3.title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+/*# sourceMappingURL=main.css.map */

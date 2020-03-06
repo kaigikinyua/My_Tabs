@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MyTabs | Username</title>
+    <link rel="stylesheet" href="/static/CSS/main.css"/>
+    <link rel="stylesheet" href="/static/CSS/desktop/desktop.css">
+</head>
+<body>
+    <div class="topnav cols2">
+        <div class="brand"><small><h3>MyTabs</small> | Username</h3></div>
+        <div class="links"><h3 class="title" id="tabname"></h3></div>
+    </div>
+    
+    <section class="app">
+        <div class="space"></div>
+        <div class="tabs">
+            <div class="tab tab_active" id="notifications">
+                <div id="p_todos">
+                    <h3 class="title">Todos</h3>
+                    <ul id="todolist">
+                        <!--delete and complete button-->
+                        <li class="todo">Index page</li>
+                        <li class="todo">Complete Nest</li>
+                        <li class="todo">Add report module in OcV</li>
+                        <li class="todo">Learn C and C++</li>
+                    </ul>
+                    <button class="floating">+</button>
+                    <form class="add_todo">
+                        <input type="text" class="text" name="todo" placeholder="Add todo.."/>
+                        <button class="send">Add</button>
+                    </form>
+                </div>
+                <div class="min_tab">
+                    <h3 class="title">Playing</h3>
+                    <div class="song_details" id="p_current_playing">
+                        
+                    </div>
+                    <div class="controls">
+                        <button class="controll">Play</button>
+                        <button class="controll">Pause</button>
+                    </div>
+                    <div class="playlist">
+                        <h3 class="title">Playlist</h3>
+                        <div id="curr_playlist"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab" id="music">
+                <div id="musiclist"></div>
+                <div id="curr_song"></div>
+            </div>
+            <div class="tab" id="videos">
+                <div id="videolist"></div>
+                <div id="curr_video"></div>
+            </div>
+        </div>
+        <div class="space"></div>
+    </section>
+
+    <div class="bottomnav">
+        <div class="page_select">
+            <button class="b_nav"><i class="b_nav">Desk</i></button>
+            <button class="b_nav"><i class="b_nav">Music</i></button>
+            <button class="b_nav"><i class="b_nav">Videos</i></button>
+        </div>
+    </div>
+</body>
+</html>

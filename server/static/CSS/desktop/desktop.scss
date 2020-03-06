@@ -1,0 +1,179 @@
+@import '../global/global.scss';
+//defaults
+body{
+    overflow: hidden;
+}
+input,button{
+    outline:none;
+}
+
+//navbars
+div.topnav{
+    position: fixed;
+    top:0px;left:0px;
+    width:100vw;
+    box-shadow: 1px 1px 2px 2px rgba(10,10,10,0.4);
+    z-index:10;
+    background:white;
+    div.brand{
+        padding:10px;
+        font-family: Arial;
+        color:$accent;
+        h3{
+            font-weight: lighter;
+            small{
+                font-size: 12px;
+                font-family: monospace;
+            }
+        }
+    }
+}
+div.bottomnav{
+    position: fixed;
+    bottom:0px;left:0px;
+    width:100vw;
+    z-index:10;
+    background:$primary;
+    box-shadow: 1px 1px 5px 5px $shadow;
+    div.page_select{
+        position: relative;
+        @include center_h;
+        max-width: 600px;
+        padding:5px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        button.b_nav{
+            position: relative;
+            @include center_h;
+            padding:5px;
+            background:none;
+            border:1px solid $accent;
+            height: 50px; width:50px;
+            font-size: 12px;
+            border-radius: 50%;
+            outline: none;
+            transition:0.5s;
+        }
+        button.b_nav:hover{
+            width:100px;
+            border-radius: 20px;
+            font-size: 15px;
+        }
+        button.active{
+            background:lightseagreen;
+            color:white;
+        }
+    }
+}
+
+
+//app
+div.app{
+    position: relative;
+    height:100vh;
+    width:100vh;
+    overflow: hidden;
+}
+div.space{
+    height:40px;
+}
+div.tabs{
+    position: relative;
+    height:80%;width:96%;
+    @include center_h;
+    margin-top:10px;
+    //responsive -- display flex, overflow-scroll
+}
+
+div.tab{
+    position: relative;
+    width:100%;height:100%;
+    display: none;
+    //responsive - border-radius 20px;
+}
+div.tab_active{
+    display: block;
+}
+
+//different tabs
+//notificatons tab
+div#notifications{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    padding:5px;
+    background:$primary;
+}
+div.p_todos{
+    border-right: 1px solid $accent;
+}
+//todo list
+ul#todolist{
+    list-style-type: none;
+    padding:15px;
+    margin:0px 5px;
+    height: 300px;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    li.todo{
+        margin:10px 0px;
+        background: rgb(230,230,230);
+        padding:10px;
+        border-radius: 20px;
+        font-family: sans-serif;
+        transition:0.3s;
+    }
+    li.todo:hover{
+        background:$primary;
+        box-shadow: 1px 1px 5px 5px $shadow;
+    }
+}
+button.floating{
+    position: relative;
+    @include center_h;
+    font-size: 30px;
+    height:50px;
+    width:50px;
+    padding:5px;
+    padding-bottom: 10px;
+    border-radius: 50%;
+    background:none;
+    border:none;
+    color:$accent;
+    transition:0.3s;
+}
+button.floating:hover{
+    font-size: 40px;
+}
+form.add_todo{
+    text-align: center;
+    display: none;
+    input,button{
+        padding:10px;
+    }
+    input{
+        min-width:300px;
+        border-radius: 20px;
+        border:1px solid black;
+    }
+}
+
+//min-tab
+div.min_tab{
+    border-left: 2px solid lightgray;
+}
+div.song_details{
+    height:200px;
+    background-image:url('/static/Images/audio.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+div.controls{
+    padding:10px;
+    margin-top:-50px;
+    background:$shadow;
+    text-align: center;
+    button.controll{
+        padding:5px;
+    }
+}

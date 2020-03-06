@@ -1,0 +1,17 @@
+$primary:whitesmoke;
+$secondary:white;
+$accent:#0983E3;
+$shadow:rgba(10,10,10,0.3);
+
+@mixin center_h {
+    left:50%;
+    transform: translateX(-50%);
+}
+@mixin center_v {
+    top:50%;
+    transform: translateX(-50%);
+}
+@mixin middle {
+    top:50%;left:50%;
+    transform: translateX(-50%);
+}
