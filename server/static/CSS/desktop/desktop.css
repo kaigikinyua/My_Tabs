@@ -299,6 +299,10 @@ div.song_title button.controls {
   margin: 0px 10px;
 }
 
+div.song_title button.hidden {
+  display: none;
+}
+
 div.curr_song {
   position: relative;
   background-image: url("/static/Images/audio.png");
@@ -320,6 +324,18 @@ ul.musiclist li {
 
 ul.musiclist li i {
   margin: 0px 10px;
+}
+
+audio {
+  display: none;
+}
+
+div.timmer {
+  height: 3px;
+  width: 800px;
+  background: #0983E3;
+  position: absolute;
+  margin-top: 10px;
 }
 
 div.min_tab {

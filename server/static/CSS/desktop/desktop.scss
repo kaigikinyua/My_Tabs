@@ -248,6 +248,9 @@ div.song_title{
         border:none;
         margin:0px 10px;
     }
+    button.hidden{
+        display: none;
+    }
 }
 div.curr_song{
     position: relative;
@@ -268,8 +271,17 @@ ul.musiclist{
         }
     }
 }
+audio{
+    display: none;
+}
 
-
+div.timmer{
+    height:3px;
+    width:800px;
+    background:$accent;
+    position: absolute;
+    margin-top:10px;
+}
 
 //min-tab
 div.min_tab{
