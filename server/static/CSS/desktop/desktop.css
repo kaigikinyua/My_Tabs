@@ -108,24 +108,25 @@ div.tabs {
   position: relative;
   height: 80%;
   width: 96%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   margin-top: 10px;
+  display: inline-block;
 }
 
 div.tab {
   position: relative;
-  width: 100%;
-  height: 100%;
-  display: none;
+  width: 96%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 div.tab_active {
-  display: block;
+  visibility: visible;
 }
 
-div#notifications {
+div.desk {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 3fr 2fr;
@@ -263,6 +264,62 @@ form.add_todo input {
   min-width: 300px;
   border-radius: 20px;
   border: 1px solid black;
+}
+
+div.music {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  background: whitesmoke;
+}
+
+div.song_title {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background: rgba(10, 10, 10, 0.7);
+  padding: 20px;
+  text-align: center;
+}
+
+div.song_title h3.title {
+  color: white;
+}
+
+div.song_title div.main {
+  padding: 0px 10px;
+  display: inline;
+}
+
+div.song_title button.controls {
+  background: none;
+  color: white;
+  border: none;
+  margin: 0px 10px;
+}
+
+div.curr_song {
+  position: relative;
+  background-image: url("/static/Images/audio.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+ul.musiclist {
+  list-style-type: none;
+  padding: 10px;
+}
+
+ul.musiclist li {
+  padding: 5px;
+  margin: 10px 0px;
+}
+
+ul.musiclist li i {
+  margin: 0px 10px;
 }
 
 div.min_tab {

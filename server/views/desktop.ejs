@@ -11,13 +11,14 @@
 <body>
     <div class="topnav cols2">
         <div class="brand"><small><h3>MyTabs</small> | Username</h3></div>
-        <div class="links"><h3 class="title" id="tabname"></h3></div>
+        <div class="links"><h3 class="title" id="tabname">Desktop</h3></div>
     </div>
     
     <section class="app">
         <div class="space"></div>
         <div class="tabs">
-            <div class="tab tab_active" id="notifications">
+            <section id="desktop" class="full">
+                <div class="tab desk tab_active">
                 <div id="p_todos">
                     <h3 class="title">Todos</h3>
                     <ul id="todolist">
@@ -36,7 +37,6 @@
                 <div class="min_tab">
                     <h3 class="title">Playing</h3>
                     <div class="song_details" id="p_current_playing">
-                        
                     </div>
                     <div class="controls">
                         <button class="controll"><i class="fa fa-play"></i></button>
@@ -44,27 +44,52 @@
                     </div>
                     <div class="playlist">
                         <h3 class="title">Playlist</h3>
-                        <div id="curr_playlist"></div>
+                        <div id="curr_playlist">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="tab" id="music">
-                <div id="musiclist"></div>
-                <div id="curr_song"></div>
-            </div>
-            <div class="tab" id="videos">
+                </div>
+            </section>
+
+            <section class="full" id="music">
+                <div class="tab music">
+                    <div class="curr_song">
+                        <!--<audio class="curr_song" src=""></audio>-->
+                        <div class="song_title">
+                            <h3 class="title">Song Title</h3>
+                            <div class="main">
+                                <button class="controls"><i class="fa fa-backward"></i></button>
+                                <button class="controls"><i class="fa fa-play"></i></button>
+                                <button class="controls"><i class="fa fa-forward"></i></button>
+                            </div>
+                            <button class="controls"><i class="fa fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div id="musiclist">
+                        <ul class="musiclist">
+                            <li><i class="fa fa-music"></i>Song ONe</li>
+                            <li><i class="fa fa-music"></i>Song Two</li>
+                            <li><i class="fa fa-music"></i>Song Three</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="full" id="videos">
+                <div class="tab" >
                 <div id="videolist"></div>
                 <div id="curr_video"></div>
-            </div>
+                </div>
+            </section>
         </div>
         <div class="space"></div>
     </section>
 
     <div class="bottomnav">
         <div class="page_select">
-            <button class="b_nav"><i class="fa fa-home"><small>Home</small></i></button>
-            <button class="b_nav"><i class="fa fa-music"><small>Music</small></i></button>
-            <button class="b_nav"><i class="fa fa-video"><small>Videos</small></i></button>
+            <a href="#desktop"><button class="b_nav"><i class="fa fa-home"><small>Home</small></i></button></a>
+            <a href="#music"><button class="b_nav"><i class="fa fa-music"><small>Music</small></i></button></a>
+            <a href="#videos"><button class="b_nav"><i class="fa fa-video"><small>Videos</small></i></button></a>
         </div>
     </div>
 
@@ -92,4 +117,5 @@
 </body>
 <script src="/static/JS/desktop.js"></script>
 <script src="/static/JS/mutimedia.js"></script>
+<script src="/static/JS/dom.js"></script>
 </html>

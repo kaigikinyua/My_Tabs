@@ -6,6 +6,9 @@
 
 //ap defaults
 
+html{
+    scroll-behavior: smooth;
+}
 //scrollbar 
 ::-webkit-scrollbar{
     width:6px;
@@ -51,6 +54,7 @@ h3.title{
     font-weight: lighter;
     margin-bottom: 15px;
     padding:5px;
+    text-transform: capitalize;
 }
 
 button{

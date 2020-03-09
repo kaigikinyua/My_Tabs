@@ -3,6 +3,10 @@
   margin: 0px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
   background: rgba(10, 10, 10, 0.3);
@@ -51,6 +55,7 @@ h3.title {
   font-weight: lighter;
   margin-bottom: 15px;
   padding: 5px;
+  text-transform: capitalize;
 }
 
 button {
