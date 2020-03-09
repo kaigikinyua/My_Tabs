@@ -46,21 +46,28 @@ div.bottomnav{
             position: relative;
             @include center_h;
             padding:5px;
-            background:none;
             border:1px solid $accent;
             height: 50px; width:50px;
             font-size: 12px;
             border-radius: 50%;
             outline: none;
             transition:0.5s;
+            small{
+                display: none;
+                margin:5px;
+            }
         }
         button.b_nav:hover{
             width:100px;
             border-radius: 20px;
             font-size: 15px;
+            small{
+                display: inline;
+                font-size: 15px;
+            }
         }
         button.active{
-            background:lightseagreen;
+            background:$accent;
             color:white;
         }
     }
@@ -127,6 +134,63 @@ ul#todolist{
         box-shadow: 1px 1px 5px 5px $shadow;
     }
 }
+
+//active todo
+div.view_todo{
+    position: fixed;
+    @include middle;
+    z-index: 100;
+    height:400px;
+    width:500px;
+    background:white;
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+    div.title{
+        background: $accent;
+        color:white;
+        font-size: 22px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding:10px;
+    }
+    div.content{
+        ul.subtasks{
+            list-style: none;
+            li{
+                padding:10px;
+                margin:10px 0px;
+                display: grid;
+                grid-template-columns: 3fr 1fr;
+                small{
+                    font-family: Arial;
+                    font-size: 16px;
+                }
+                div.sub_action{
+                    button{
+                        border:none;
+                        margin:0px 10px;
+                    }
+                }
+            }
+        }
+    }
+    div.actions{
+        background:$accent;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+div.cover{
+    position: absolute;
+    display: none;
+    top:0px;
+    height:100vh;
+    width:100vw;
+    background:$shadow;
+    z-index: 99;
+}
+
+
+
 button.floating{
     position: relative;
     @include center_h;

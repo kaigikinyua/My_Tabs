@@ -62,7 +62,6 @@ div.bottomnav div.page_select button.b_nav {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   padding: 5px;
-  background: none;
   border: 1px solid #0983E3;
   height: 50px;
   width: 50px;
@@ -73,14 +72,24 @@ div.bottomnav div.page_select button.b_nav {
   transition: 0.5s;
 }
 
+div.bottomnav div.page_select button.b_nav small {
+  display: none;
+  margin: 5px;
+}
+
 div.bottomnav div.page_select button.b_nav:hover {
   width: 100px;
   border-radius: 20px;
   font-size: 15px;
 }
 
+div.bottomnav div.page_select button.b_nav:hover small {
+  display: inline;
+  font-size: 15px;
+}
+
 div.bottomnav div.page_select button.active {
-  background: lightseagreen;
+  background: #0983E3;
   color: white;
 }
 
@@ -152,6 +161,71 @@ ul#todolist li.todo:hover {
   background: whitesmoke;
   -webkit-box-shadow: 1px 1px 5px 5px rgba(10, 10, 10, 0.3);
           box-shadow: 1px 1px 5px 5px rgba(10, 10, 10, 0.3);
+}
+
+div.view_todo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 100;
+  height: 400px;
+  width: 500px;
+  background: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 4fr 1fr;
+      grid-template-rows: 1fr 4fr 1fr;
+}
+
+div.view_todo div.title {
+  background: #0983E3;
+  color: white;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+}
+
+div.view_todo div.content ul.subtasks {
+  list-style: none;
+}
+
+div.view_todo div.content ul.subtasks li {
+  padding: 10px;
+  margin: 10px 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+}
+
+div.view_todo div.content ul.subtasks li small {
+  font-family: Arial;
+  font-size: 16px;
+}
+
+div.view_todo div.content ul.subtasks li div.sub_action button {
+  border: none;
+  margin: 0px 10px;
+}
+
+div.view_todo div.actions {
+  background: #0983E3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+div.cover {
+  position: absolute;
+  display: none;
+  top: 0px;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(10, 10, 10, 0.3);
+  z-index: 99;
 }
 
 button.floating {

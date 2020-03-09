@@ -14,6 +14,10 @@
   background: #0983E3;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   overflow-x: hidden;
   background: lightgray;
@@ -31,8 +35,8 @@ div.container {
   width: 90%;
   top: 50%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .cols2 {
@@ -47,5 +51,38 @@ h3.title {
   font-weight: lighter;
   margin-bottom: 15px;
   padding: 5px;
+}
+
+button {
+  outline: none;
+  border: 1px solid #0983E3;
+  background: white;
+  color: #0983E3;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+button i.fa {
+  margin: 5px;
+}
+
+button small {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+button:hover {
+  border: 1px solid rgba(10, 10, 10, 0.3);
+  background: #0983E3;
+  color: whitesmoke;
+}
+
+button.danger {
+  color: crimson;
+}
+
+button.danger:hover {
+  background: crimson;
+  color: white;
 }
 /*# sourceMappingURL=main.css.map */

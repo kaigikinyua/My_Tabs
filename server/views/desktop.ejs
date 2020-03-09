@@ -6,6 +6,7 @@
     <title>MyTabs | Username</title>
     <link rel="stylesheet" href="/static/CSS/main.css"/>
     <link rel="stylesheet" href="/static/CSS/desktop/desktop.css">
+    <link rel="stylesheet" href="/static/CSS/all.min.css">
 </head>
 <body>
     <div class="topnav cols2">
@@ -21,12 +22,12 @@
                     <h3 class="title">Todos</h3>
                     <ul id="todolist">
                         <!--delete and complete button-->
-                        <li class="todo">Index page</li>
+                        <li class="todo" onclick="view_todo()">Index page</li>
                         <li class="todo">Complete Nest</li>
                         <li class="todo">Add report module in OcV</li>
                         <li class="todo">Learn C and C++</li>
                     </ul>
-                    <button class="floating">+</button>
+                    <button class="floating"><i class="fa fa-plus"></i></button>
                     <form class="add_todo">
                         <input type="text" class="text" name="todo" placeholder="Add todo.."/>
                         <button class="send">Add</button>
@@ -38,8 +39,8 @@
                         
                     </div>
                     <div class="controls">
-                        <button class="controll">Play</button>
-                        <button class="controll">Pause</button>
+                        <button class="controll"><i class="fa fa-play"></i></button>
+                        <button class="controll"><i class="fa fa-pause"></i></button>
                     </div>
                     <div class="playlist">
                         <h3 class="title">Playlist</h3>
@@ -61,10 +62,34 @@
 
     <div class="bottomnav">
         <div class="page_select">
-            <button class="b_nav"><i class="b_nav">Desk</i></button>
-            <button class="b_nav"><i class="b_nav">Music</i></button>
-            <button class="b_nav"><i class="b_nav">Videos</i></button>
+            <button class="b_nav"><i class="fa fa-home"><small>Home</small></i></button>
+            <button class="b_nav"><i class="fa fa-music"><small>Music</small></i></button>
+            <button class="b_nav"><i class="fa fa-video"><small>Videos</small></i></button>
         </div>
     </div>
+
+
+   <!-- <div class="view_todo">
+        <div class="title">Test Todo</div>
+        <div class="content">
+            <ul class="subtasks">
+                <li>
+                    <small>Subtask One</small>
+                    <div class="sub_action">
+                        <button><i class="fa fa-check"></i></button>
+                        <button class="danger"><i class="fa fa-trash"></i></button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="actions">
+            <button><i class="fa fa-check"></i><small>Done</small></button>
+            <button class="danger"><i class="fa fa-trash"></i><small>Delete</small></button>
+        </div>
+    </div>
+    -->
+    <div class="cover" id="cover" onclick="hide_view_todo()"></div>
 </body>
+<script src="/static/JS/desktop.js"></script>
+<script src="/static/JS/mutimedia.js"></script>
 </html>

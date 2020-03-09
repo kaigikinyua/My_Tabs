@@ -3,6 +3,9 @@
     padding:0px;
     margin:0px;
 }
+
+//ap defaults
+
 //scrollbar 
 ::-webkit-scrollbar{
     width:6px;
@@ -13,6 +16,11 @@
     border-radius: 5px;
     background:$accent;
 }
+//links
+a{
+    text-decoration: none;
+}
+
 
 //
 
@@ -20,6 +28,9 @@ body{
     overflow-x: hidden;
     background:lightgray;
 }
+
+
+
 section.full{
     position: relative;
     height:100vh;
@@ -41,3 +52,31 @@ h3.title{
     margin-bottom: 15px;
     padding:5px;
 }
+
+button{
+    outline:none;
+    border:1px solid $accent;
+    background:white;
+    color:$accent;
+    transition:1s;
+    i.fa{
+        margin:5px;
+    }
+    small{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+    }
+}
+button:hover{
+    border:1px solid $shadow;
+    background: $accent;
+    color:$primary;
+}
+button.danger{
+    color:crimson;
+}
+button.danger:hover{
+    background:crimson;
+    color:white;
+}
+//add success
