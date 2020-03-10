@@ -283,6 +283,46 @@ div.timmer{
     margin-top:10px;
 }
 
+
+//video tab
+div.video_tab{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    overflow:hidden;
+    video.curr_video{
+        position: relative;
+        max-width: 100%;
+        max-width: 100%;
+        @include center_h;
+    }
+    div.video_title{
+        z-index:10;
+        div.controls{
+            margin-top:-10px;
+            button.control,div.main{
+                display: inline;
+            }
+            button.control{
+                border:none;
+                background:none;
+                color:$primary;
+            }
+            div.main{
+                margin:0px 30px;
+            }
+            button.hidden{
+                display: none;
+            }
+        }
+    }
+}
+div.screen{
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+}
+
+
+
 //min-tab
 div.min_tab{
     border-left: 2px solid lightgray;
@@ -293,13 +333,24 @@ div.song_details{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    text-align: center;
+    video.curr_playing{
+        max-height:300px;
+        width:auto;
+    }
+    .hidden{
+        display: none;
+    }
 }
 div.controls{
     padding:10px;
     margin-top:-50px;
     background:$shadow;
     text-align: center;
-    button.controll{
-        padding:5px;
+    button.controls{
+        background:none;
+        color:white;
+        border:none;
+        margin:0px 10px;
     }
 }

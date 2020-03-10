@@ -11,7 +11,9 @@
 <body>
     <div class="topnav cols2">
         <div class="brand"><small><h3>MyTabs</small> | Username</h3></div>
-        <div class="links"><h3 class="title" id="tabname">Desktop</h3></div>
+        <div class="links">
+            <h3 class="title">Desktop <button><i class="fa fa-moon"></i></button></h3>
+        </div>
     </div>
     
     <section class="app">
@@ -36,7 +38,9 @@
                 </div>
                 <div class="min_tab">
                     <h3 class="title">Playing</h3>
-                    <div class="song_details" id="p_current_playing">
+                    <div class="song_details">
+                        <video src="/media/home/antony/Music/Kenyan/Nyashinski - Balance.mkv" class="curr_playing" id="video_min"></video>
+                        <audio class="curr_playing" id="curr_audio_min"></audio>
                     </div>
                     <div class="controls">
                         <button class="controll"><i class="fa fa-play"></i></button>
@@ -77,14 +81,44 @@
                             <li><i class="fa fa-music"></i>Song Two</li>
                             <li><i class="fa fa-music"></i>Song Three</li>
                         </ul>
+                        <h3 class="title">Playlists</h3>
+                        <ul class="musiclist">
+                            <li><i class="fa fa-folder"></i>Energy</li>
+                        </ul>
                     </div>
                 </div>
             </section>
             
             <section class="full" id="videos">
-                <div class="tab" >
-                <div id="videolist"></div>
-                <div id="curr_video"></div>
+                <div class="tab video_tab">
+                    <div class="screen">
+                        <video src="/media/home/antony/Music/Heart/Passenger_ Heart's On Fire.mkv" class="curr_video" id="curr_video"></video>
+                        <div class="video_title">
+                            <div class="controls">
+                                <button class="control"><i class="fa fa-volume-down"></i></button>
+                                <button class="control"><i class="fa fa-volume-up"></i></button>
+                                <div class="main">
+                                    <button class="control"><i class="fa fa-backward"></i></button>
+                                    <button class="control" id="video_play" onclick="playVideo()" ><i class="fa fa-play"></i></button>
+                                    <button class="control hidden" id="video_pause" onclick="pauseVideo()"><i class="fa fa-pause"></i></button>
+                                    <button class="control"><i class="fa fa-forward"></i></button>
+                                </div>
+                                <button class="control"><i class="fa fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="videolist">
+                        <h3 class="title">Videos</h3>
+                        <ul class="musiclist">
+                            <li><i class="fa fa-video"></i>Video One</li>
+                            <li><i class="fa fa-video"></i>Video One</li>
+                            <li><i class="fa fa-video"></i>Video One</li>
+                            <li><i class="fa fa-video"></i>Video One</li>
+                        </ul>
+                        <ul class="musiclist">
+                            <li><i class="fa fa-folder"></i>Playlist one</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
         </div>
