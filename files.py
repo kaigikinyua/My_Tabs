@@ -11,6 +11,8 @@ class Files:
         filename=f.get_filename(filepath)
         D=Database()
         D.add_file(filepath,filename,fileType)
+        print("added "+str(filename))
+        time.sleep(1)
 
     #check for other directories within the directory
     @staticmethod
@@ -19,7 +21,7 @@ class Files:
         contents=f.list_dir(folderpath)
         for content in contents:
             if(f.is_file(folderpath+"/"+str(content))):
-                Files.add_file(folder+"/"+str(content),fileType)
+                Files.add_file(folderpath+"/"+str(content),fileType)
 
     @staticmethod
     def remove_files(filepath):
