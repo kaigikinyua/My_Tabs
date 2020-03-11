@@ -5,6 +5,8 @@ import time
 
 
 from gui import Output
+from files import Files
+
 
 class MyApp:
     def __init__(self):
@@ -30,19 +32,26 @@ class MyApp:
 
     def add_file(self):
         file_path=input("Enter filename\n")
+        fileType=input("Add file as 1->audio or 2->video?")
         if(os.path.isfile(file_path)):
             Output.success("adding file")
+            if(fileType=="2"):
+                Files.add_file(file_path,"video")
+            else:
+                Files.add_file(file_path,"audio")
         else:
             Output.display_error("Selected file path is not a file")
 
     def add_directory(self):
         folder_path=input("Enter folder path\n")
+        file_type=input("Add folder contents as of type?\n1->audio\n2->video\n")
         if(os.path.isdir(folder_path)):
             Output.success("Adding files in dir "+str(folder_path))
-            files=os.listdir(folder_path)
-            for file in files:
-                print("File "+str(file))
-                time.sleep(0.5)
+            F=Files()
+            if(file_type==2):
+                F.add_folder(folder_path,"video")
+            else:
+                F.add_folder(folder_path,"audio")
         else:
             Output.display_error("Selected folder does not exist")
 
