@@ -3,7 +3,10 @@ baseUrl="http://localhost:4000"
 currentPlaylist=""
 currentMedia={media:"",volume:0.5,time:0,title:"","src":"","type":""}
 
+songList=[]
+videoList=[]
 
+//playList
 
 var videos=[]
 var audio=[]
@@ -25,6 +28,7 @@ function getAudio(){
     ajax(url,(state,data)=>{
         if(state==true){
             var audioList=data[1].audio
+            songList=data[1].audio
             populateAudio(audioList)
         }else{
             error("Error while loading audio "+data)
@@ -57,6 +61,13 @@ function loadAudio(audioUrl){
     var song=document.getElementById('curr_song')
     song.src=audioUrl
     playSong()
+    var song_title=document.getElementById('song_title')
+    songList.forEach(s=>{
+        if("/media/"+s.Path==audioUrl){
+            song_title.innerHTML=s.Title
+        }
+    })
+
 }
 
 function playSong(){

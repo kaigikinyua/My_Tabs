@@ -1,1 +1,7 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+section.landing {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/*# sourceMappingURL=index.css.map */

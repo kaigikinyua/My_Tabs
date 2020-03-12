@@ -321,12 +321,24 @@ ul.musiclist {
 }
 
 ul.musiclist li {
-  padding: 5px;
+  padding: 10px 5px;
   margin: 10px 0px;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 ul.musiclist li i {
   margin: 0px 10px;
+}
+
+ul.musiclist li:nth-child(even) {
+  background: lightgray;
+}
+
+ul.musiclist li:hover {
+  background: #0983E3;
+  color: white;
+  cursor: pointer;
 }
 
 audio {

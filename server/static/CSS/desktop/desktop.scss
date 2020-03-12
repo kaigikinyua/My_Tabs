@@ -267,13 +267,23 @@ ul.musiclist{
     overflow-y:scroll;
     overflow-x:hidden;
     li{
-        padding:5px;
+        padding:10px 5px;
         margin:10px 0px;
+        transition:1s;
         i{
             margin:0px 10px;
         }
     }
+    li:nth-child(even){
+        background:lightgray;
+    }
+    li:hover{
+        background:$accent;
+        color:white;
+        cursor: pointer;
+    }
 }
+
 audio{
     display: none;
 }

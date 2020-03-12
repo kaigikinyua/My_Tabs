@@ -8,12 +8,12 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
   background: rgba(10, 10, 10, 0.3);
 }
 
 ::-webkit-scrollbar-thumb {
-  width: 7px;
+  width: 5px;
   border-radius: 5px;
   background: #0983E3;
 }
