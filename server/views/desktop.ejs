@@ -58,7 +58,6 @@
             <section class="full" id="music">
                 <div class="tab music">
                     <div class="curr_song">
-                        <!--<audio class="curr_song" src=""></audio>-->
                         <div class="song_title">
                             <h3 class="title" id="curr_song_title">Song Title</h3>
                             <button class="controls" onclick="volumeDown()"><i class="fa fa-volume-down"></i></button>
@@ -68,18 +67,16 @@
                                 <button class="controls" onclick="playSong()" id="play_audio"><i class="fa fa-play"></i></button>
                                 <button class="controls hidden" onclick="pauseSong()" id="pause_audio"><i class="fa fa-pause"></i></button>
                                 <button class="controls"><i class="fa fa-forward"></i></button>
-                                <audio class="audio" id="curr_song" ontimeupdate="updateCurrentMediaTime()" src="/media/home/antony/Music/Kenyan/Nyashinski - Balance.mkv"></audio>
+                                <audio class="audio" id="curr_song" ontimeupdate="updateCurrentMediaTime()"></audio>
                             </div>
                             <button class="controls"><i class="fa fa-heart"></i></button>
                             <div class="timmer"></div>
                         </div>
                     </div>
-                    <div id="musiclist">
+                    <div>
                         <h3 class="title">Songs</h3>
-                        <ul class="musiclist">
-                            <li><i class="fa fa-music"></i>Song One</li>
-                            <li><i class="fa fa-music"></i>Song Two</li>
-                            <li><i class="fa fa-music"></i>Song Three</li>
+                        <ul class="musiclist" id="musiclist">
+                            
                         </ul>
                         <h3 class="title">Playlists</h3>
                         <ul class="musiclist">

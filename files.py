@@ -13,7 +13,6 @@ class Files:
         D.add_file(filepath,filename,fileType)
         print("added "+str(filename))
         time.sleep(1)
-
     #check for other directories within the directory
     @staticmethod
     def add_folder(folderpath,fileType):

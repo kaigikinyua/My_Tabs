@@ -263,6 +263,9 @@ div.curr_song{
 ul.musiclist{
     list-style-type: none;
     padding:10px;
+    max-height: 300px;
+    overflow-y:scroll;
+    overflow-x:hidden;
     li{
         padding:5px;
         margin:10px 0px;

@@ -1,7 +1,7 @@
 baseUrl="http://localhost:4000"
 
 currentPlaylist=""
-currentMedia={media:"",volume:0.5,time:0,title:""}
+currentMedia={media:"",volume:0.5,time:0,title:"","src":"","type":""}
 
 
 
@@ -14,7 +14,6 @@ function getVideos(){
     ajax(url,(state,data)=>{
         if(state==true){
             videos=data[1].videos
-            console.log(videos)
         }else{
             error("Error while loading videos "+data)
         }
@@ -25,13 +24,40 @@ function getAudio(){
     var url=baseUrl+"/audio"
     ajax(url,(state,data)=>{
         if(state==true){
-            videos=data.audio
+            var audioList=data[1].audio
+            populateAudio(audioList)
         }else{
             error("Error while loading audio "+data)
         }
     });
 }
-
+//DOM methods to populate audio playlist
+function populateAudio(audioList){
+    var mList=document.getElementById('musiclist')
+    audioList.forEach(element => {
+        var tile=document.createElement("li")
+        var icon=document.createElement("i")
+        icon.classList.add("fa")
+        icon.classList.add("fa-music")
+        var title=document.createElement("small")
+        title.innerHTML=element.Title
+        title.data="/media/"+element.Path
+        icon.data="/media/"+element.Path
+        tile.appendChild(icon)
+        tile.appendChild(title)
+        tile.addEventListener("click",(e)=>{
+            console.log(e.target.data)
+            loadNewCurrMedia("audio",e.target.data)
+            loadAudio(e.target.data)
+        })
+        mList.appendChild(tile)
+    });
+}
+function loadAudio(audioUrl){
+    var song=document.getElementById('curr_song')
+    song.src=audioUrl
+    playSong()
+}
 
 function playSong(){
     var song=document.getElementById('curr_song')
@@ -44,6 +70,7 @@ function playSong(){
         currentMedia.media=song
         currentMedia.time=0
     }
+    console.log("Playing "+song.src)
     song.currentTime=currentMedia.time
     currentMedia.media.play()
     var play=document.getElementById('play_audio')
@@ -117,6 +144,18 @@ function pauseVideo(){
 
 }
 //curr media functions
+
+function loadNewCurrMedia(type,source){
+    //if there was any prevous media eject it
+    var min_player
+    if(type=="video"){
+        min_player=document.getElementById("video_min")
+    } else{
+        min_player=document.getElementById("curr_audio_min")
+    }
+    min_player.src=source
+}
+
 function playCurr(){
     try{
         currentMedia.media.play()
@@ -143,7 +182,7 @@ function next(){}
 
 /*module
 function loadVideo(videoURL){}
-function loadAudio(audioUrl){}
+
 */
 
 /* module
