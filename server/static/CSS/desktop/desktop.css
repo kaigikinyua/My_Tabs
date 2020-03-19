@@ -28,7 +28,6 @@ div.topnav div.brand h3 {
 }
 
 div.topnav div.brand h3 small {
-  font-size: 12px;
   font-family: monospace;
 }
 
@@ -65,7 +64,7 @@ div.bottomnav div.page_select button.b_nav {
   border: 1px solid #0983E3;
   height: 50px;
   width: 50px;
-  font-size: 12px;
+  font-size: 15px;
   border-radius: 50%;
   outline: none;
   -webkit-transition: 0.5s;
@@ -80,12 +79,10 @@ div.bottomnav div.page_select button.b_nav small {
 div.bottomnav div.page_select button.b_nav:hover {
   width: 100px;
   border-radius: 20px;
-  font-size: 15px;
 }
 
 div.bottomnav div.page_select button.b_nav:hover small {
   display: inline;
-  font-size: 15px;
 }
 
 div.bottomnav div.page_select button.active {
@@ -318,6 +315,7 @@ ul.musiclist {
   max-height: 300px;
   overflow-y: scroll;
   overflow-x: hidden;
+  font-size: 10px;
 }
 
 ul.musiclist li {
