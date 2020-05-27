@@ -74,15 +74,17 @@ function playSong(){
     var song=document.getElementById('curr_song')
     if(currentMedia.media!=song){
         try {
+            pauseVideo()
             currentMedia.media.pause()
+            //currentMedia.time=0
         } catch (error) {
             
         }
         currentMedia.media=song
-        currentMedia.time=0
+        //currentMedia.time=0
     }
     console.log("Playing "+song.src)
-    song.currentTime=currentMedia.time
+    //song.currentTime=currentMedia.time
     currentMedia.media.play()
     var play=document.getElementById('play_audio')
     play.classList.add('hidden')
@@ -122,12 +124,12 @@ function playVideo(){
         try {
             pauseSong()
             currentMedia.media.pause()
-            currentMedia.time=0
+            //currentMedia.time=video.currentTime
         } catch (error) {
             
         }
         currentMedia.media=video
-        currentMedia.time=0
+        //currentMedia.time=0
     }
     currentMedia.media=document.getElementById('video_min')
     currentMedia.media.src=video.src
@@ -144,9 +146,9 @@ function playVideo(){
 
 function pauseVideo(){
     var video=document.getElementById('curr_video')
-    currentMedia.time=video.currentTime
+    //currentMedia.time=video.currentTime
     video.pause()
-    currentMedia.media.pause()
+    //currentMedia.media.pause()
     pauseCurr()
     var video_play=document.getElementById('video_play')
     var video_pause=document.getElementById('video_pause')
@@ -176,9 +178,20 @@ function playCurr(){
 }
 function pauseCurr(){
     try{
-    currentMedia.media.pause()
+        currentMedia.media.pause()
+        currentMedia.time=currentMedia.media.currentTime
+        pauseSong()
+        pauseSong()
     }catch{
 
+    }
+}
+function resumeCurr(){
+    try{
+        currentMedia.media.currentTime=currentMedia.time
+        currentMedia.media.play()
+    }catch{
+        
     }
 }
 function nextMedia(){}

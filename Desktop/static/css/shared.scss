@@ -1,0 +1,85 @@
+@import './global.scss';
+
+//removing defaults
+*{
+    padding:0px;
+    margin:0px;
+}
+
+body{
+	height: 100vh;
+	overflow: hidden;
+	font-family: Arial;
+}
+
+a,button{
+	outline: none;
+}
+a{
+	text-decoration: none;
+}
+
+//text
+.title{
+	font-weight: lighter;
+	margin:10px;
+	font-size: 25px;
+}
+
+.subtitle{
+	font-weight:bolder;
+	letter-spacing: 2px;
+	font-size: 20px;
+	margin:5px;
+}
+.paragraph{
+	margin:5px;
+	font-size: 18px;
+	font-weight: lighter;
+}
+
+//buttons
+button{
+	padding:10px;
+}
+
+.button_full{
+	position: relative;
+	width: 100%;
+	@include center_h;
+}
+
+.button_dark{
+
+}
+.button_light{
+
+}
+
+
+
+//shared components
+nav.topnav{
+	position: fixed;
+	top:0px;
+	width:100vw;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	box-shadow: 1px 1px 10px 10px rgba(10,10,10,0.5);
+	div{
+		padding:10px;
+	}
+}
+
+//lists
+ul.hor,ul.ver{
+	list-style: none;
+}
+ul.hor{
+	li{
+		display: inline-block;
+		margin-left: 10px;
+	}
+}
+
+//screen sizes
