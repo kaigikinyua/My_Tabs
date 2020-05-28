@@ -1,0 +1,111 @@
+body {
+  overflow: hidden;
+}
+
+section.notes {
+  position: relative;
+  height: 95%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 5px;
+  margin-top: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+}
+
+div.noteList {
+  position: relative;
+  overflow-y: hidden;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 11fr;
+      grid-template-rows: 1fr 11fr;
+}
+
+div.noteTitles {
+  position: relative;
+  height: 80%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: lightgray;
+}
+
+div.search {
+  text-align: center;
+  padding: 10px 0px;
+}
+
+div.search h3 {
+  margin: 5px;
+}
+
+div.search input.search {
+  position: relative;
+  width: 100%;
+  border-radius: 5px;
+}
+
+div.noteTitle {
+  padding: 10px;
+  margin: 10px;
+  background: white;
+}
+
+div.viewNote {
+  position: relative;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 12fr;
+      grid-template-rows: 1fr 12fr;
+}
+
+div.noteData {
+  padding: 10px;
+}
+
+div.noteData h3, div.noteData small {
+  display: inline-block;
+}
+
+div.noteBody {
+  overflow-y: scroll;
+}
+
+div.noteBody div.topSpace {
+  height: 100px;
+}
+
+div.paragraph {
+  font-size: 16px;
+  padding: 10px;
+}
+
+div.addNote {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 10;
+  -webkit-box-shadow: 1px 1px 10px 10px rgba(10, 10, 10, 0.5);
+          box-shadow: 1px 1px 10px 10px rgba(10, 10, 10, 0.5);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: white;
+}
+
+div.addNote i {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 22px;
+}
+/*# sourceMappingURL=notes.css.map */

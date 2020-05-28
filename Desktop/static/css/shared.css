@@ -5,7 +5,8 @@
 
 body {
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
   font-family: Arial;
 }
 
@@ -24,7 +25,7 @@ a {
 }
 
 .subtitle {
-  font-weight: bolder;
+  font-weight: lighter;
   letter-spacing: 2px;
   font-size: 20px;
   margin: 5px;
@@ -48,6 +49,10 @@ button {
           transform: translateX(-50%);
 }
 
+input {
+  padding: 5px 10px;
+}
+
 nav.topnav {
   position: fixed;
   top: 0px;
@@ -58,10 +63,17 @@ nav.topnav {
       grid-template-columns: 1fr 1fr;
   -webkit-box-shadow: 1px 1px 10px 10px rgba(10, 10, 10, 0.5);
           box-shadow: 1px 1px 10px 10px rgba(10, 10, 10, 0.5);
+  z-index: 10;
+  background: white;
 }
 
 nav.topnav div {
   padding: 10px;
+}
+
+div.topSpace {
+  position: relative;
+  height: 50px;
 }
 
 ul.hor, ul.ver {
@@ -71,5 +83,15 @@ ul.hor, ul.ver {
 ul.hor li {
   display: inline-block;
   margin-left: 10px;
+}
+
+section.full {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: 10px;
 }
 /*# sourceMappingURL=shared.css.map */

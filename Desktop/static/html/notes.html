@@ -4,11 +4,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>My_Tabs</title>
+	<link rel="stylesheet" href="../css/shared.css">
+	<link rel="stylesheet" href="../css/all.min.css">
+	<link rel="stylesheet" href="../css/notes/notes.css">
+	<script src="./services/notes.js"></script>
 </head>
 <body>
 	<!--Topnav-->
 	<nav class="topnav">
-		<div class="barner"></div>
+		<div class="barner">
+			<h3 class="subtitle">Username<small> | notes</small></h3>
+		</div>
 		<div class="links">
 			<ul class="hor">
 				<a href="./index.html"><li>Entertainment</li></a>
@@ -17,18 +23,63 @@
 			</ul>
 		</div>
 	</nav>
-	<!--sidenav-->
+	<!--sidenav
 	<nav class="sidenav">
 		<div class="barner">
 			<div class="icon"></div>
 			<h3 class="title"></h3>
 		</div>
-	</nav>
+	</nav>-->
 
-	<section class="full entertainment">
-		<div class="movies" id="movies"></div>
-		<div class="songs" id="songs"></div>
+	<section class="full notes">
+		<div class="noteList">
+			<div class="search">
+				<h3 class="title">Notes</h3>
+				<input type="text" class="search" placeholder="Search">
+			</div>
+			<div class="noteTitles" id="noteList">
+				<script>
+					var nodList=document.getElementById('noteList')
+					for(var i=0;i<100;i++){
+						var note=document.createElement("div")
+						note.classList="noteTitle"
+						note.innerHTML="Note to self "+i
+						nodList.appendChild(note)
+					}
+				</script>
+			</div>
+		</div>
+		<div class="viewNote">
+			<div class="noteData">
+				<h3 class="title">Note Title</h3>
+				<small>12/10/2020</small>
+			</div>
+			<div class="noteBody" id="noteBody">
+				<script>
+						var nodList=document.getElementById('noteBody')
+						for(var i=0;i<100;i++){
+							var note=document.createElement("div")
+							note.classList="paragraph"
+							note.innerHTML="Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, optio molestias? Ipsam, iure? Distinctio aliquid cupiditate molestiae officiis error laboriosam! Dolores illo porro amet quibusdam nam ipsum tenetur vero corporis."
+							nodList.appendChild(note)
+						}
+				</script>
+				<div class="topSpace"></div>
+			</div>
+		</div>
 	</section>
+	
+	<div class="addNote">
+		<i class="fa fa-plus"></i>
+	</div>
+
+	<!--
+	<section class="addNote">
+		<label for=""></label>
+		<input type="text" id="noteTitle" class="noteTitle" placeholder="title">
+		<textarea name="note" id="notePar" cols="30" rows="10"></textarea>
+	</section>
+	-->
 
 </body>
 </html>

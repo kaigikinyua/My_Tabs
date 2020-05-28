@@ -1,0 +1,93 @@
+@import '../global.scss';
+
+body{
+    overflow: hidden;
+}
+
+section.notes{
+    position: relative;
+    height:95%;
+    @include middle;
+    padding:5px;
+    margin-top:50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+}
+//notes [col one of notes]
+div.noteList{
+    position: relative;
+    overflow-y: hidden;
+    display: grid;
+    grid-template-rows: 1fr 11fr;
+}
+div.noteTitles{
+    position: relative;
+    height: 80%;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    background: lightgray;
+}
+div.search{
+    text-align: center;
+    padding:10px 0px;
+    h3{
+        margin:5px;
+    }
+    input.search{
+        position: relative;
+        width:100%;
+        border-radius: 5px;
+    }
+}
+
+div.noteTitle{
+    padding:10px;
+    margin:10px;
+    //box-shadow: 1px 1px 5px 5px rgba(10,10,10,0.5);
+    background: white;
+}
+
+
+//viewed note [2 column of section]
+div.viewNote{
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 1fr 12fr;
+}
+div.noteData{
+    padding:10px;
+    h3,small{
+        display: inline-block;
+    }
+}
+
+div.noteBody{
+    overflow-y:scroll;
+    div.topSpace{
+        height:100px;
+    }
+}
+div.paragraph{
+    font-size: 16px;
+    padding:10px;
+}
+
+//addNote
+div.addNote{
+    position: fixed;
+    bottom:10px;
+    @include center_h;
+    z-index: 10;
+    box-shadow: 1px 1px 10px 10px rgba(10,10,10,0.5);
+    height:30px;
+    width:30px;
+    border-radius: 50%;
+    background:white;
+    i{
+        position: relative;
+        @include middle;
+        font-size: 22px;
+    }
+}

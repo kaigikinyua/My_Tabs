@@ -1,0 +1,8 @@
+{
+    "Username":"Silver",
+    "Curr_Theme":"normal",
+    "Themes":[
+        {"theme":"dark"},
+        {"theme":"normal"}
+    ]
+}
