@@ -6,14 +6,23 @@ const dialog=require('electron').dialog
 let win;
 
 function createWindow(){
-    win=new BrowserWindow({width:900,height:650})
+    win=new BrowserWindow(
+        {
+            width:900,
+            height:650,
+            webPreferences: {
+                nodeIntegration: true
+            }
+        },
+        
+    )
     win.loadURL(url.format({
-     pathname:path.join(__dirname,"/static/html/index.html"),
+     pathname:path.join(__dirname,"/static/test.html"),
      protocol:'file',
      slashes:true   
     }))
     //open dev tools
-   // win.webContents.openDevTools()
+   win.webContents.openDevTools()
     
     win.on('closed',()=>{
         win==null;

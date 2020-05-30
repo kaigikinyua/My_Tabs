@@ -79,7 +79,8 @@ nav.topnav{
 nav.sidenav{
 	position: fixed;
 	right:0px;top:0px;
-	max-width: 400px;
+	min-width: 400px;
+	text-align: center;
 	height: 100vh;
 	z-index: 10;
 	background: white;
@@ -100,6 +101,9 @@ ul.hor{
 		display: inline-block;
 		margin-left: 10px;
 	}
+}
+ul.ver{
+	li{margin:10px 0px;}
 }
 //sections
 section.full{
