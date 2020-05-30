@@ -1,0 +1,28 @@
+@import '../global.scss';
+
+section.entertainment{
+    overflow: hidden;
+}
+#movies{
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding:10px;
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+    video{
+        scroll-snap-align: start;
+        position: relative;
+        height: 300px;
+        width: auto;
+        margin:10px;
+    }
+    h3{
+        padding:5px;
+        font-size: 16px;
+        font-weight: lighter;
+        text-align: center;
+        overflow: hidden;
+    }
+
+}

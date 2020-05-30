@@ -1,8 +1,1 @@
-{
-    "movies":[
-            {"title":"(7) Electron js Tutorial - 4 - BrowserWindow - YouTube.mp4","path":"/home/antony/school/programming/destop_scripts/electron/(7) Electron js Tutorial - 4 - BrowserWindow - YouTube.mp4"}
-        ],
-        "favourites":[
-            {"title":"one"}
-            ]
-        }
+{"movies":[{"title":"(7) Electron js Tutorial - 4 - BrowserWindow - YouTube.mp4","path":"/home/antony/school/programming/destop_scripts/electron/(7) Electron js Tutorial - 4 - BrowserWindow - YouTube.mp4"},{"title":"(11) Electron JS in 100 Seconds - YouTube.mkv","path":"/home/antony/school/programming/destop_scripts/electron/(11) Electron JS in 100 Seconds - YouTube.mkv"},{"title":"rick.and.morty.s04e02.webrip.x264-tbs.mkv","path":"/media/antony/New Volume/Entertainment/Series/Rick & Morty/ssn4/rick.and.morty.s04e02.webrip.x264-tbs.mkv"},{"title":"MacGyver.2016.S04E13.HDTV.x264-SVA.mkv","path":"/media/antony/New Volume/Entertainment/Series/MacGyver/ssn4/MacGyver.2016.S04E13.HDTV.x264-SVA.mkv"}],"favourites":[{"title":"one"}]}

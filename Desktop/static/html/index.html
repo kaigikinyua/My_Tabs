@@ -6,7 +6,9 @@
 	<title>My_Tabs</title>
 	<link rel="stylesheet" href="../css/shared.css">
 	<link rel="stylesheet" href="../css/all.min.css">
+	<link rel="stylesheet" href="../css/index/index.css">
 	<script type="module" src="../js/index.js"></script>
+	<script src="../js/shared.js"></script>
 </head>
 <body>
 	<!--Topnav-->
@@ -19,6 +21,7 @@
 				<a href="./notes.html"><li><i class="fa fa-sticky-note"></i><small>Notes</small></li></a>
 				<a href="./todos.html"><li><i class="fa fa-check"></i></li><small>Todos</small></a>
 				<a href="./settings.html"><i class="fa fa-cog"></i><li><small>Settings</small></li></a>
+				<li><i class="fa fa-list" onclick="navBar()"></i></li>
 			</ul>
 		</div>
 	</nav>
@@ -34,6 +37,7 @@
 				<li>Remove File</li>
 				<li>Add Directory</li>
 				<li>Remove Directory</li>
+				<li onclick="navBar()"><i class="fa fa-times"></i></li>
 			</ul>
 		</div>
 	</nav>

@@ -1,0 +1,32 @@
+section.entertainment {
+  overflow: hidden;
+}
+
+#movies {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  overflow: scroll;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+
+#movies video {
+  scroll-snap-align: start;
+  position: relative;
+  height: 300px;
+  width: auto;
+  margin: 10px;
+}
+
+#movies h3 {
+  padding: 5px;
+  font-size: 16px;
+  font-weight: lighter;
+  text-align: center;
+  overflow: hidden;
+}
+/*# sourceMappingURL=index.css.map */

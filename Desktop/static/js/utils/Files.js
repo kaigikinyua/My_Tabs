@@ -6,7 +6,7 @@ export default class Files{
     constructor(){
         console.log("Files module")
     }
-    addFile(filePath){
+    addMovie(filePath){
         var storagePath=configs+"/Entertainment/Ent.json"
         fs.readFile(storagePath,'utf8',(err,data)=>{
             console.log("reading file"+storagePath)
