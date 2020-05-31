@@ -21,6 +21,20 @@ export default class Files{
             }
         })
     }
+    addPlayList(dirPath){
+        var storagePath=configs+"/Entertainment/Ent.json"
+        fs.readFile(storagePath,'utf8',(err,data)=>{
+            if(err)Files.errorMessage("Failed to access "+storagePath)
+            else{
+                var playListJson=JSON.parse(data)
+                var splitPath=dirPath[0].split('/')
+                var playListTitle=splitPath[splitPath.length-1]
+                playListJson.playlist.push({"title":playListTitle,"path":dirPath[0]})
+                Files.writeToFile(storagePath,JSON.stringify(playListJson))
+            }
+        })
+
+    }
 
     static fetchMovies(fn){
         var storagePath=configs+"/Entertainment/Ent.json"

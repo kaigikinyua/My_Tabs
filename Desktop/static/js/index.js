@@ -9,15 +9,29 @@ const dialog=require('electron').remote.dialog
 //dom
 
 const addMovie=document.getElementById('addFile');
+const addPlayList=document.getElementById("addPlayList");
 
+//adding movie
 addMovie.addEventListener('click',(e)=>{
     dialog.showOpenDialog()
     .then((result)=>{
         var files=new Files()
         files.addMovie(result.filePaths)
+        fetchMovies()
     })
 });
+addPlayList.addEventListener('click',(e)=>{
+    dialog.showOpenDialog({properties:['openDirectory']})
+    .then(result=>{
+        console.log(result.filePaths)
+        var files=new Files()
+        files.addPlayList(result.filePaths)
+    })
+})
 
+
+
+//fetching movies and adding them to the dom
 function fetchMovies(){
     Files.fetchMovies((data)=>{
         var movies=JSON.parse(data).movies
